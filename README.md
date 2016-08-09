@@ -1,5 +1,7 @@
 # Pipeable
 
+[![Build Status](https://travis-ci.org/gnarmis/pipeable.svg?branch=master)](https://travis-ci.org/gnarmis/pipeable) [![Gem Version](https://badge.fury.io/rb/pipeable.svg)](https://badge.fury.io/rb/pipeable)
+
 A small (< 34 sloc) library that allows you to 'pipeline,' or 'thread' a value
 through a number of callables.
 
@@ -9,8 +11,6 @@ Pipeable(3) | :add_one | :square | ->(x) { x-3 } | :puts
 ```
 
 ## Installation
-
-[![Gem Version](https://badge.fury.io/rb/pipeable.svg)](https://badge.fury.io/rb/pipeable)
 
 Run `gem install pipeable` or add `gem "pipeable"` to your Gemfile.
 
