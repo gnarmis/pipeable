@@ -8,10 +8,23 @@ Pipeable(3) | :add_one | :square | ->(x) { x-3 } | :puts
 # prints '13'
 ```
 
-Installation: `gem install pipeable` or `gem "pipeable"` in your Gemfile. Check
-it out on rubygems.org for more details.
+## Installation
+
+[![Gem Version](https://badge.fury.io/rb/pipeable.svg)](https://badge.fury.io/rb/pipeable)
+
+Run `gem install pipeable` or add `gem "pipeable"` to your Gemfile.
+
+Then, you can `require` it and `include` it as needed.
+
+```
+> require 'pipeable'
+> include Pipeable
+> Pipeable(1) | ->(x) { x + 1 } | :puts
+# prints "2"
+````
 
 ## Usage
+
 
 Sometimes, you have to compose a series of discrete actions into one composed
 function. In something as basic as a bash/zsh function, you can compose
