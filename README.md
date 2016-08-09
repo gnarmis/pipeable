@@ -4,17 +4,22 @@ A small (< 34 sloc) library that allows you to 'pipeline,' or 'thread' a value
 through a number of callables.
 
 ```
-Pipeline(3) | :add_one | :square | ->(x) { x-3 } | :puts
+Pipeable(3) | :add_one | :square | ->(x) { x-3 } | :puts
 # prints '13'
 ```
 
-Sometimes, you have to compose a series of discrete steps into one composed
+Installation: `gem install pipeable` or `gem "pipeable"` in your Gemfile. Check
+it out on rubygems.org for more details.
+
+## Usage
+
+Sometimes, you have to compose a series of discrete actions into one composed
 function. In something as basic as a bash/zsh function, you can compose
 discrete steps (like a particular `grep` or `sed` invocation, or any
-binary/script at all) using UNIX pipes. But in Ruby, it's a few steps removed;
-there's no vocabulary for building a 'pipeline' of sorts. Also, in languages
-like Racket and Clojure, you have the `->` macro (among others) to make just
-such a pipeline.
+binary/script at all) using UNIX pipes. But in Ruby, this kind of operation is
+a few steps removed; there's no vocabulary for building a 'pipeline.' Also, in
+languages like Racket and Clojure, you have the `->` macro (among others) to
+make just such a pipeline.
 
 Well, let's extend Ruby's vocabulary a bit!
 
@@ -46,6 +51,18 @@ class TestClass
 end
 
 # `TestClass.new.pipe(3)` will result in `16`
+```
+
+## Develop
+
+As you can see in `LICENSE.txt`, we have an MIT license.
+
+Pull requests welcome, but please help keep this a super tiny library!
+
+## Test
+
+```
+bundle exec rspec spec
 ```
 
 

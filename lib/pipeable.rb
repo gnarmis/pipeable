@@ -1,3 +1,5 @@
+Dir[File.dirname(__FILE__) + '/pipeable/*.rb'].each {|file| require file }
+
 module Pipeable
   # Can initialize with any value and then allow you to pipe it through any
   # methods or Procs/lambdas
