@@ -38,6 +38,10 @@ module Pipeable
     end
   end
 
+  def >(*_)
+    @value
+  end
+
   # `self` inside this method's body will refer to the caller, allowing
   # Pipeable to support responding correctly to symbols
   def Pipeable(*args)
